@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inicio</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <style>
+      body {
+        background-image: url('https://w.wallhaven.cc/full/1p/wallhaven-1pd1o9.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const buttons = document.querySelectorAll('.button');
+        buttons.forEach((button) => {
+          button.addEventListener('click', (event) => {
+            button.classList.add('clicked');
+          });
+          button.addEventListener('transitionend', (event) => {
+            button.classList.remove('clicked');
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="text-center my-5">
+      
+        <h1 class="mx-auto my-0 text-uppercase"></h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">Bienvenido al Blog</h2>
+      </div>
+    </header>
+
+    <div class="container">
+      <h2></h2>
+      <div class="buttons">
+        <a href="{% url 'register' %}" class="button register">Registrarse</a>
+        <a href="{% url 'login' %}" class="button login">Iniciar sesión</a>
+        <a href="{% url 'create_note' %}" class="button create-note">Crear nota</a>
+        <a href="{% url 'change_password' %}" class="button change_password">Editar Contra</a>
+        <a href="{% url 'logout' %}" class="button change_password">Cerrar sesión</a>
+      </div>
+    </div>
+  </body>
+</html>

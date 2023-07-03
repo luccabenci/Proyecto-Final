@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Notas</title>
+</head>
+<body>
+    <h1>Lista de Notas</h1>
+    <ul>
+    {% for note in notes %}
+        <li>{{ note.title }}</li>
+    {% empty %}
+        <li>No hay notas disponibles.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,30 @@
+Proyecto de Blog:
+Este es el repositorio del proyecto de Blog Boos, un blog interactivo donde los usuarios pueden registrarse, iniciar sesión y crear notas.
+
+Características:
+Registro de usuarios: Los usuarios pueden crear una cuenta proporcionando su nombre de usuario, dirección de correo electrónico y contraseña.
+Inicio de sesión: Los usuarios registrados pueden iniciar sesión en su cuenta utilizando su nombre de usuario y contraseña.
+Creación de notas: Una vez que los usuarios han iniciado sesión, pueden crear notas y compartirlas en el blog.
+
+Tecnologías utilizadas:
+HTML: Se utiliza para la estructura y el marcado del contenido de las páginas web.
+CSS: Se utiliza para el diseño y la apariencia visual del sitio web.
+Django: Un framework de desarrollo web de Python que proporciona una estructura sólida para la construcción de aplicaciones web.
+
+Instalación: 
+Accede al directorio del proyecto.
+cd myblog
+
+Instala las dependencias del proyecto:
+pip install -r requisitos.txt
+
+Ejecuta las migraciones de la base de datos:
+python manage.py migrate
+
+Inicia el servidor de desarrollo:
+python manage.py runserver
+
+
+Proyecto creado por:
+Nombre y Apellido: Lucca Bencivenga
+Gmail: bencilm2003@gmail.com

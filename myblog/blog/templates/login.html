@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+  <style>
+    /* Estilos personalizados */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #e0f2f1;
+    }
+
+    form {
+      background-color: #b2ebf2;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4fc3f7;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form method="post">
+      {% csrf_token %}
+      <h2>Iniciar sesión</h2>
+      {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {{ form.as_p }}
+      <input type="submit" value="Iniciar sesión">
+    </form>
+  </div>
+</body>
+</html>

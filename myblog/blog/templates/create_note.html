@@ -1,0 +1,20 @@
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div style="margin-bottom: 10px;">
+    <label for="id_title">Título:</label><br>
+    {{ form.title }}
+  </div>
+  <div style="margin-bottom: 10px;">
+    <label for="id_content">Contenido:</label><br>
+    {{ form.content }}
+  </div>
+  <div style="margin-bottom: 10px;">
+    <label for="id_image"></label><br>
+    {{ form.image.label_tag }}
+    {{ form.image }}
+  </div>
+  <input type="submit" value="Crear nota" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">
+</form>
+<a href="{% url 'note_list' %}">Ver todas las notas</a>
+</body>
+</html>
